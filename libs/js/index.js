@@ -5,11 +5,13 @@ $(function () {
         app.init = function () {
             app.Bindings(); // funcion donde se colocan las llamadas para el desarrollo
             app.CreateStarsList(); //fuerza carga de lista en el index. Auto-ejecutable
+            app.createFooter();
         };
 
+        
         app.CreateStarsList = function () {
 
-            $.getJSON("libs/js/json/categories.json", function (data) {
+            $.getJSON("json/categories.json", function (data) {
                 var categoriesContent = '';
                 $.each(data, function (index, category) {
                     categoriesContent += '<li><a href="#hotelsByCategory?id=' + category.id + '" data-transition="slide">' + category.name + '</a></li>';
@@ -40,7 +42,7 @@ $(function () {
         };
 
         app.ShowHotelsByCategory = function (categoryId) {
-            $.getJSON("libs/js/json/hotels.json", function (data) {
+            $.getJSON("json/hotels.json", function (data) {
                 var hotelContent = '';
                 $.each(data, function (index, hotel) {
                     if (hotel.categoryId.toString() === categoryId.toString()) {
@@ -52,7 +54,7 @@ $(function () {
         };
         
         app.ShowHotelDetal = function(hotelId){
-            $.getJSON("libs/js/json/hotels.json", function (data) {
+            $.getJSON("json/hotels.json", function (data) {
                 var hotelContent = '';
                 $.each(data, function (index, hotel) {
                     if (hotel.id.toString() === hotelId.toString()) {
@@ -64,7 +66,18 @@ $(function () {
                 });
             });
         };
-
+            
+        app.createFooter=function (){
+            
+            $('.footer').html('<div data-role="navbar">\n\
+                        <ul>\n\
+                        <li>\n\
+                            <a href="a.html">One</a>\n\
+                        </li>\n\
+                        <li>\n\
+                            <a href="b.html">Two</a>\n\
+                        </li></ul></div>')
+        };
 
         app.init();
 

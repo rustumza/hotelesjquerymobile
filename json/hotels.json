@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Hyatt",
+        "categoryId": 1
+    },
+    {
+        "id": 2,
+        "name": "Sheraton",
+        "categoryId": 1
+    },
+    {
+        "id": 3,
+        "name": "Huentala",
+        "categoryId": 2
+    },
+    {
+        "id": 4,
+        "name": "NH",
+        "categoryId": 3
+    },
+    {
+        "id": 5,
+        "name": "Aconcagua",
+        "categoryId": 4
+    },
+    {
+        "id": 6,
+        "name": "Alameda",
+        "categoryId": 5
+    }
+]
