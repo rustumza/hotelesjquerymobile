@@ -13,11 +13,13 @@
             <div data-role="header">
                 <h1>Hoteles </h1>
             </div>
-            <div role="main" class="ui-content">
-                <ul data-role="listview" id="categoriesList" data-inset="true"></ul>
-            </div>
-            <div data-role="footer" data-position="fixed">
-                <h1>Footer</h1>
+            
+                <div role="main" class="ui-content">
+                    <ul data-role="listview" id="categoriesList" data-inset="true"></ul>
+                </div>
+            
+            <div data-role="footer" data-position="fixed" class="footer">
+                
             </div>    
         </div>
 
@@ -27,8 +29,11 @@
                 <a href="#index" data-role="button" data-transition="slide">Volver</a>
                 <h1>Hoteles <span id="categoryName"></span></h1>
             </div>
-            <div data-role="content">
+            <div role="main">
                 <ul data-role="listview" id="hotelsList" data-inset="true"></ul>
+            </div>
+            <div data-role="footer" data-position="fixed" class="footer">
+                
             </div>
         </div> 
 
@@ -38,9 +43,12 @@
                 <a id="goToHotelsListBtn" data-role="button" data-transition="slide">Volver</a>
                 <h1 id="hotelName" style="text-align: center"></h1>
             </div>
-            <div data-role="content">       
+            <div role="main">       
                 <div id="mainImageContainer">
                 </div>
+            </div>
+            <div data-role="footer" data-position="fixed" class="footer">
+                
             </div>
         </div>
 
